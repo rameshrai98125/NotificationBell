@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BELL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        
+        }
+        body{
+            background: #000;
+            height: 100vh;
+            color: white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .fa-bell{
+           font-size: 120px;
+         
+          
+        }
+   
+        @keyframes bell{
+
+            0%{transform: rotate(-20deg);}
+           100%{transform: rotate(20deg);}
+            
+        }
+
+        .bell{
+            position: relative;
+            animation: bell 1s linear infinite alternate-reverse;
+           transform-origin: top;
+        }
+        .bell::after{
+            content: attr(count);
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: red;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            border: 3px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- using ATTR() class -->
+
+    <div class="bell" count="9">
+        <i class="fa-solid fa-bell"></i>   
+    </div>
+
+
+</body>
+</html>
